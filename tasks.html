@@ -9,24 +9,25 @@
     <head>
         <title>Task Management: Kip Price</title>
         <style>
-            /*{border-style:dashed; border-width: 1px; position: relative;}*/
+            *{border-radius: 10px;}
             
             .marginalized{margin-left: 3%; margin-top: 10%; width:100%;}
             tr{width:inherit;}
             td{width:auto;}
             
             
-            .listView{display:table; background-color: #DDD; padding:3px;}
+            .listView{display:table; background-color: #DDD; padding:3px; position:absolute;  border-style: groove; border-width:thin;}
             .listViewItem{display:table-row table-cell; margin-top: 10px;}
             
-            .listContentContainer{display: table; width:500px; margin: auto; background: transparent url("http://www.qualitydiapers.net/Yellow_Notepad.jpg") repeat-x; background-position: -100px -98px; background-size: 600px auto;}
+            .listContentContainer{display: table; width:500px; margin: auto; background-color: #CDF; border-style: outset; border-width:thin; padding:10px;}
             .listContent{display: table; padding-left: 20px; width: -webkit-calc(100% - 20px);}
             
-            .elementContainer{display:table table-row; width:100%;}
+            .elementContainer{display:table table-row; width:100%; border-width: 1px 0 0 0; border-style: solid; border-radius: 0px; border-color: #ABD;}
             .elementValue{display: table-cell;}
             .elementCheck{display: table-cell;}
             .elementDate{display:table-cell; text-align:right; color:#CCC; width:inherit;}
             
+            .spacer{width:inherit; padding: 4px;}
             
             /*
             .listView{display:table; margin-left: 3%; margin-top:10%; background-color: #DDD; padding: 10px; }
@@ -64,6 +65,7 @@
                     <!--This is the content of the currently loaded list-->
                     <div id="lc" class="listContentContainer">
                         This is the head of the list
+                        <div class="spacer"></div>
                         <div class="listContent">
                             <div class="elementContainer">
                                 <div class="elementCheck"><input type="checkbox"/></div>
