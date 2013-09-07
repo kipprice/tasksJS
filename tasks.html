@@ -9,23 +9,27 @@
     <head>
         <title>Task Management: Kip Price</title>
         <style>
-            *{border-radius: 10px;}
+            *{border-radius: 10px; font-family: "Cambria"}
             
             .marginalized{margin-left: 3%; margin-top: 10%; width:100%;}
             tr{width:inherit;}
             td{width:auto;}
             
+            body{margin:0;}
             
-            .listView{display:table; background-color: #DDD; padding:3px; position:absolute;  border-style: groove; border-width:thin;}
-            .listViewItem{display:table-row table-cell; margin-top: 10px;}
+            
+            .listView{display:table; background-color: #DDD; padding:3px; position:absolute;  border-style: groove; border-width:thin; margin-top: 5%; margin-left: 5%; }
+            .listViewItem{display:table-row table-cell; margin: 10px;}
+            .bar{border-bottom: 1px solid #BBB; border-radius: 0px;}
             
             .listContentContainer{display: table; width:500px; margin: auto; background-color: #CDF; border-style: outset; border-width:thin; padding:10px;}
             .listContent{display: table; padding-left: 20px; width: -webkit-calc(100% - 20px);}
+            .listContainer{width:100%; margin-left:3px;}
             
-            .elementContainer{display:table table-row; width:100%; border-width: 1px 0 0 0; border-style: solid; border-radius: 0px; border-color: #ABD;}
-            .elementValue{display: table-cell;}
+            .elementContainer{display:table table-row; width:100%; background-color: #F2F2FF; margin: 3px; padding: 0 3px 0 3px;}
+            .elementValue{display: table-cell; width:inherit;}
             .elementCheck{display: table-cell;}
-            .elementDate{display:table-cell; text-align:right; color:#CCC; width:inherit;}
+            .elementDate{display:table-cell; text-align:right; color:#888;}
             
             .spacer{width:inherit; padding: 4px;}
             
@@ -41,73 +45,78 @@
     </head>
     
     <body>
-        
-        <table class="marginalized">
+            <!--Here, we put our list of lists-->
+            <div class="listView">
+                <div class="listViewItem">
+                    Hello
+                </div>
+                <div class="bar"></div>
+                <div class="listViewItem">
+                    Nice to meet you
+                </div>
+                <div class="bar"></div>
+                <div class="listViewItem">
+                    Goodbye
+                </div>
+                
+            </div>
+
+                
+                <table style="padding-top:10%; margin:auto;"><tr>
             <!--In our table, we want three columns potentially, each with resizability-->
             <tr>
-                <td style="width:150px">
-                    <!--Here, we put our list of lists-->
-                    <div class="listView">
-                        <div class="listViewItem">
-                            Hello
-                        </div>
-                        <div class="listViewItem">
-                            Nice to meet you
-                        </div>
-                        <div class="listViewItem">
-                            Goodbye
-                        </div>
-                        
-                    </div>
-
-                </td>
                 <td>
                     <!--This is the content of the currently loaded list-->
                     <div id="lc" class="listContentContainer">
                         This is the head of the list
-                        <div class="spacer"></div>
+                        <div class="spacer bar"></div>
                         <div class="listContent">
                             <div class="elementContainer">
                                 <div class="elementCheck"><input type="checkbox"/></div>
-                                <div class="elementValue">Value</div>
+                                <div class="elementValue">Peas</div>
                                 <div class="elementDate">9/7/13</div>
                             </div>
                             <div class="elementContainer">
                                 <div class="elementCheck"><input type="checkbox"/></div>
-                                <div class="elementValue">Value</div>
+                                <div class="elementValue">Carrots</div>
                                 <div class="elementDate">9/7/13</div>
                             </div>
-                            <div class="elementContainer">
-                                <div class="elementCheck"><input type="checkbox"/></div>
-                                <div class="elementValue">Value</div>
-                                <div class="elementDate">9/7/13</div>
+                            <div class="listContainer">
+                                <div class="elementContainer" style="margin: 0px">
+                                    <div class="elementCheck"><input type="checkbox"/></div>
+                                    <div class="elementValue">Fruits</div>
+                                    <div class="elementDate">9/7/13</div>
+                                </div>
+                                
                                 <div class="listContent">
-                                    <div class="elementContainer">
+                                    <div class="elementContainer" style="margin-top:1px; margin-left:2px;">
                                         <div class="elementCheck"><input type="checkbox"/></div>
-                                        <div class="elementValue">Value</div>
+                                        <div class="elementValue">Passionfruit</div>
                                         <div class="elementDate">9/7/13</div>
                                     </div>
-                                     <div class="elementContainer">
-                                <div class="elementCheck"><input type="checkbox"/></div>
-                                <div class="elementValue">Value</div>
-                                <div class="elementDate">9/7/13</div>
-                                <div class="listContent">
-                                    <div class="elementContainer">
-                                        <div class="elementCheck"><input type="checkbox"/></div>
-                                        <div class="elementValue">Value</div>
-                                        <div class="elementDate">9/7/13</div>
+                                     <div class="listContainer">
+                                        <div class="elementContainer" style="margin-bottom:0; margin-left:-1px;">
+                                            <div class="elementCheck"><input type="checkbox"/></div>
+                                            <div class="elementValue">The gays</div>
+                                            <div class="elementDate">9/7/13</div>
+                                        </div>
+                                        <div class="listContent">
+                                            <div class="elementContainer" style="margin-top:1px; margin-left:1px;">
+                                                <div class="elementCheck"><input type="checkbox"/></div>
+                                                <div class="elementValue">Whee</div>
+                                                <div class="elementDate">9/7/13</div>
+                                            </div>
+            
+                                        </div>
                                     </div>
-                
                                 </div>
                             </div>
-                        </div>
-                                </div>
-                            </div>
-                        </div>
                         
                     </div>
                     
-                </td>
+                </div>
+                
+            </td>
                 <td>
                     <!--This is the detailed information about the currently loaded list-->
                     
