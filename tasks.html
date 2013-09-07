@@ -9,32 +9,113 @@
     <head>
         <title>Task Management: Kip Price</title>
         <style>
-            *{border-style:dashed; border-width: 1px;}
+            /*{border-style:dashed; border-width: 1px; position: relative;}*/
+            
+            .marginalized{margin-left: 3%; margin-top: 10%; width:100%;}
+            tr{width:inherit;}
+            td{width:auto;}
+            
+            
+            .listView{display:table; background-color: #DDD; padding:3px;}
+            .listViewItem{display:table-row table-cell; margin-top: 10px;}
+            
+            .listContentContainer{display: table; width:500px; margin: auto; background: transparent url("http://www.qualitydiapers.net/Yellow_Notepad.jpg") repeat-x; background-position: -100px -98px; background-size: 600px auto;}
+            .listContent{display: table; padding-left: 20px; width: -webkit-calc(100% - 20px);}
+            
+            .elementContainer{display:table table-row; width:100%;}
+            .elementValue{display: table-cell;}
+            .elementCheck{display: table-cell;}
+            .elementDate{display:table-cell; text-align:right; color:#CCC; width:inherit;}
+            
+            
+            /*
             .listView{display:table; margin-left: 3%; margin-top:10%; background-color: #DDD; padding: 10px; }
             .listInView{margin-top: 100px; display:table-row; color: #00F;  }
             .list{display: table; padding-left: 20px; width:inherit; }
             .item{display: table-row; border-style:solid; border-width:medium; width:inherit}
             .itemCheck{ width: 2px; max-width: 20px;}
             .itemValue{ font-size: 12pt; font-family: "Cambria"; padding: 0px 10px 0 10px;}
-            .itemDate{font-size: 10pt; font-family: "Cambria"; color: #BBB; text-align: right; }
+            .itemDate{font-size: 10pt; font-family: "Cambria"; color: #BBB; text-align: right; }*/
         </style>
     </head>
     
     <body>
         
-        <div class="listView">
-            <div class="listInView">
-                Hello there
-            </div>
-            <div class="listInView" onclick="alert('You pressed something!')">
-                Something
-            </div>
-        </div>
+        <table class="marginalized">
+            <!--In our table, we want three columns potentially, each with resizability-->
+            <tr>
+                <td style="width:150px">
+                    <!--Here, we put our list of lists-->
+                    <div class="listView">
+                        <div class="listViewItem">
+                            Hello
+                        </div>
+                        <div class="listViewItem">
+                            Nice to meet you
+                        </div>
+                        <div class="listViewItem">
+                            Goodbye
+                        </div>
+                        
+                    </div>
+
+                </td>
+                <td>
+                    <!--This is the content of the currently loaded list-->
+                    <div id="lc" class="listContentContainer">
+                        This is the head of the list
+                        <div class="listContent">
+                            <div class="elementContainer">
+                                <div class="elementCheck"><input type="checkbox"/></div>
+                                <div class="elementValue">Value</div>
+                                <div class="elementDate">9/7/13</div>
+                            </div>
+                            <div class="elementContainer">
+                                <div class="elementCheck"><input type="checkbox"/></div>
+                                <div class="elementValue">Value</div>
+                                <div class="elementDate">9/7/13</div>
+                            </div>
+                            <div class="elementContainer">
+                                <div class="elementCheck"><input type="checkbox"/></div>
+                                <div class="elementValue">Value</div>
+                                <div class="elementDate">9/7/13</div>
+                                <div class="listContent">
+                                    <div class="elementContainer">
+                                        <div class="elementCheck"><input type="checkbox"/></div>
+                                        <div class="elementValue">Value</div>
+                                        <div class="elementDate">9/7/13</div>
+                                    </div>
+                                     <div class="elementContainer">
+                                <div class="elementCheck"><input type="checkbox"/></div>
+                                <div class="elementValue">Value</div>
+                                <div class="elementDate">9/7/13</div>
+                                <div class="listContent">
+                                    <div class="elementContainer">
+                                        <div class="elementCheck"><input type="checkbox"/></div>
+                                        <div class="elementValue">Value</div>
+                                        <div class="elementDate">9/7/13</div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </td>
+                <td>
+                    <!--This is the detailed information about the currently loaded list-->
+                    
+                    
+                </td>
+            </tr>
+            
+        </table>
         
-        <div id="lc" style="border-style: ridge; width: 500px; display:table; margin:auto; background: transparent url('http://www.qualitydiapers.net/Yellow_Notepad.jpg') no-repeat">
-            <input type="text" id="txt" autofocus="true" onkeypress="enter()"></input>
-        </div>
-        
+
         
         
     </body>
