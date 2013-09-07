@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    
+    <!--All the script imports we need-->
+    <script src="tasksC.js"></script>
+    <script src="tasksA.js"></script>
+    
+    
+<html>
+    <head>
+        <title>Task Management: Kip Price</title>
+        <style>
+            *{border-style:dashed; border-width: 1px;}
+            .listView{display:table; margin-left: 3%; margin-top:10%; background-color: #DDD; padding: 10px; }
+            .listInView{margin-top: 100px; display:table-row; color: #00F;  }
+            .list{display: table; padding-left: 20px; width:inherit; }
+            .item{display: table-row; border-style:solid; border-width:medium; width:inherit}
+            .itemCheck{ width: 2px; max-width: 20px;}
+            .itemValue{ font-size: 12pt; font-family: "Cambria"; padding: 0px 10px 0 10px;}
+            .itemDate{font-size: 10pt; font-family: "Cambria"; color: #BBB; text-align: right; }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="listView">
+            <div class="listInView">
+                Hello there
+            </div>
+            <div class="listInView" onclick="alert('You pressed something!')">
+                Something
+            </div>
+        </div>
+        
+        <div id="lc" style="border-style: ridge; width: 500px; display:table; margin:auto; background: transparent url('http://www.qualitydiapers.net/Yellow_Notepad.jpg') no-repeat">
+            <input type="text" id="txt" autofocus="true" onkeypress="enter()"></input>
+        </div>
+        
+        
+        
+    </body>
+
+</html>
+
