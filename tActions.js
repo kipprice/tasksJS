@@ -35,7 +35,6 @@ function deleteComplete( elem ){
 	while(elem.firstChild){
 		elem.removeChild(elem.firstChild);
 	}
-
 }
 
 function addNew (e){
@@ -55,8 +54,10 @@ function addNew (e){
 			priority = text.substring(ind, text.lastIndexOf("!")+1);
 			console.log(priority);
 		}else if(text.lastIndexOf(" ") > -1){
+			priority = "";
 			val = text.substring(0, text.lastIndexOf(" "));
 		}else{
+			priority = "";
 			val = text;
 		}
 		
