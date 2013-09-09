@@ -9,7 +9,7 @@ function checkComplete( e , elem){
 
 function init(){
 	ls = new List("ls", "Groceries", new tDate(4, 12, 1993));
-	ls.add("Milk", new tDate(4,13,1993));
+	ls.add("Milk", new tDate(4,13,1993), null, null, null, 3);
 	
 	var ls2 = new SubList("ls2");
 	ls2.add("Figs");

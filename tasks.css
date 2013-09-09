@@ -20,6 +20,6 @@ body{margin:0;}
 .elementValue{display: table-cell; width:inherit;}
 .elementCheck{display: table-cell; padding-left:4px;}
 .elementDate{display:table-cell; text-align:right; color:#888; padding-right: 4px;}
-.elementPriority{display:table-cell;}
+.elementPriority{display:table-cell; padding-right: 4px; color: #E30; text-shadow:-1px 0px #000; font-size: 14pt; text-align: left;}
 
 .spacer{width:inherit; padding: 4px;}

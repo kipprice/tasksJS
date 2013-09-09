@@ -150,7 +150,17 @@ Element.prototype.display = function( elem ){
 		this.chkCont.appendChild(this.chk);
 		this.container.appendChild(this.chkCont);
 	}
-	
+	//priority code
+	if(!this.pDiv && this.priority != -1){
+		this.pDiv = document.createElement("div");
+		this.pDiv.setAttribute("class", "elementPriority");
+		
+		for(var i = 0; i < this.priority; i++){
+			this.pDiv.innerHTML += "!";
+		}
+		
+		this.container.appendChild(this.pDiv);
+	}
 	//value code
 	if(!this.vDiv){
 		this.vDiv = document.createElement("div");
@@ -173,6 +183,8 @@ Element.prototype.display = function( elem ){
 		window.clearInterval(interval);
 	}
 	
+	
+	
 	//date code
 	if(!this.dDiv && this.date.month != 0 && this.date.day != 0){
 		this.dDiv = document.createElement("div");
@@ -181,12 +193,7 @@ Element.prototype.display = function( elem ){
 		this.container.appendChild(this.dDiv);
 	}
 	
-	if(!this.pDiv && this.priority != -1){
-		this.pDiv = document.createElement("div");
-		this.pDiv.setAttribute("class", "elementPriority");
-		this.pDiv.innerHTML = this.priority;
-		this.container.appendChild(this.pDiv);
-	}
+	
 }
 
 //============================DATE CLASS============================//
