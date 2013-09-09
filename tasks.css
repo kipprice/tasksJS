@@ -11,7 +11,7 @@ body{margin:0;}
 .listViewItem{display:table-row table-cell; margin: 10px;}
 .bar{border-bottom: 1px solid #BBB; border-radius: 0px;}
 
-.listContentContainer{display: table; width:500px; margin: auto; background-color: #CDF; border-style: outset; border-width:thin; padding:10px; padding-right:20px; margin-top:10%;}
+.listContentContainer{display: table; width:500px; margin: auto; background-color: #CDF; border-style: outset; border-width:thin; padding:10px; padding-right:20px;}
 .listTitle{font-size: 16pt; font-weight:bold; border-style:none;}
 .listContent{display: table; padding-left: 20px; }
 .listContainer{width:100%;}

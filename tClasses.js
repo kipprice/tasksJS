@@ -60,6 +60,7 @@ function SubList( id, head, date ){
 	this.items = new Array();
 	this.date = date || new tDate();
 	this.head = new Element(this.id+"head", head, this.date);
+	this.head.head = true;
 	
 }
 
@@ -87,6 +88,7 @@ SubList.prototype.display = function( elem ){
 	}
 	
 	//next, build the head if we have one
+	
 	this.head.display(this.container);		//Check for existence in element
 	
 	//last, build all items in our array
@@ -98,6 +100,7 @@ SubList.prototype.display = function( elem ){
 	}
 	
 	for(var i = 0; i < this.items.length; i++){
+		console.log(this.items[i].value);
 		this.items[i].display(this.content);
 	}
 }
@@ -115,6 +118,7 @@ function Element( id, value, date, reminder, recur, notes, priority ){
 	this.priority = priority || -1;
 	this.completed = false;
 	
+	this.head = false;
 	
 }
 
